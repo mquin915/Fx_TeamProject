@@ -1,0 +1,7 @@
+/* 기본 스타일 — Tailwind 없이도 동작하도록 최소만 */
+html, body, #root { height: 100%; margin: 0; font-family: system-ui, sans-serif; background: #f7fafc; }
+select, input, button { font-size: 14px; }
+button { cursor: pointer; }
+.container { max-width: 1080px; margin: 0 auto; padding: 1rem; }
+.card { background: #fff; border-radius: 12px; padding: 1rem; box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
+.badge { display:inline-block; padding: .2rem .5rem; border-radius: 8px; background:#eef2ff; color:#3730a3; font-size:12px; }

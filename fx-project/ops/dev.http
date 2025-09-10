@@ -1,0 +1,11 @@
+### Health
+GET http://localhost:8000/health
+
+### Pairs
+GET http://localhost:8000/api/pairs
+
+### History
+GET http://localhost:8000/api/history?pair=USD_KRW&start=2024-07-01&end=2024-08-31
+
+### Predict
+GET http://localhost:8000/api/predict?pair=USD_KRW&horizon=7

@@ -1,0 +1,57 @@
+/* frontend/src/components/Dashboard.css */
+.container { max-width: 1100px; margin: 0 auto; padding: 16px; }
+.page-title { font-size: 20px; font-weight: 700; margin-bottom: 12px; }
+
+.card { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 12px; }
+/* 차트 컨테이너는 높이/포지션 보장 */
+.chart-card {
+  position: relative;  /* 안전 */
+  height: 480px;       /* 이미 있으시면 유지 */
+  overflow: hidden;    /* (선택) 버튼 레이어가 커져도 차트와 겹치지 않게 */
+}
+/* debug 용 */
+.chart-card canvas { outline: 0px dashed #66a; }
+.chart-card { background: #fafafa; }  /* 차트 면적 눈으로 확인 */
+
+.dashboard-toolbar {
+  display: flex;
+  justify-content: flex-start; /* 좌측부터 배치 */
+  gap: 12px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+/* 왼쪽 필터 블록은 고정 */
+.filters-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(120px, 1fr));
+  gap: 12px;
+  align-items: end;
+}
+/* 오른쪽 버튼 묶음을 '자동 여백'으로 우측 밀기 */
+.controls-row {
+  margin-left:auto;          /* 우측 정렬 */
+  display: flex;
+  gap: 12px;
+  align-items: end;
+}
+
+.badge { display: inline-block; font-size: 12px; color: #374151; margin-bottom: 4px; }
+
+.btn {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.btn--primary { background: #2563eb; color: white; }
+.btn--predict { background: #f59e0b; color: #111827; }
+
+.centered { display:flex; align-items:center; justify-content:center; height:100%; font-weight:600; }
+.centered--muted { color:#6b7280; }
+.centered--hint { color:#9ca3af; }
+
+.messages { margin-top: 8px; }
+.msg { padding: 8px 10px; border-radius: 8px; margin-top: 6px; font-size: 14px; }
+.msg--error { background: #fee2e2; color: #991b1b; }
